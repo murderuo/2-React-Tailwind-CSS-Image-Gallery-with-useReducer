@@ -39,6 +39,9 @@ function App() {
         <div>
           <ImageSearch dispatch={dispatch} input={input} />
         </div>
+
+      {!loading && data.length===0 && <div className="text-5xl text-center mx-auto mt-32">No Image Found....</div> }
+
         {loading ? (
           <div className="text-5xl text-center mx-auto mt-32">Loading...</div>
         ) : (
